@@ -5,13 +5,13 @@
 
 //	Define the starfield class.
 function Starfield() {
-	this.fps = 30;
+	this.fps = 45;
 	this.canvas = null;
 	this.width = 0;
 	this.height = 0;
-	this.minVelocity = 15;
-	this.maxVelocity = 30;
-	this.stars = 100;
+	this.minVelocity = 50;
+	this.maxVelocity = 200;
+	this.stars = 160;
 	this.intervalId = 0;
 }
 
@@ -21,12 +21,12 @@ Starfield.prototype.initialise = function(div) {
 
 	//	Store the div.
 	this.containerDiv = div;
-	self.width = 300;
-	self.height = 300;
+	self.width = 430;
+	self.height = 665;
 
 	window.addEventListener('resize', function resize(event) {
-		self.width = 300;
-		self.height = 300;
+		self.width = 430;
+		self.height = 665;
 		self.canvas.width = self.width;
 		self.canvas.height = self.height;
 		self.draw();

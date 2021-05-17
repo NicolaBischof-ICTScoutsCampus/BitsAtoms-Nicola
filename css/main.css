@@ -1,0 +1,42 @@
+body{
+   background-color: black; 
+}
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.card {
+    border-style: solid;
+    border-color: whitesmoke;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.text{
+    transform: translateZ(50px);
+    text-align: center;
+    color: white;
+}
+
+p{
+    transform: translateZ(20px);
+    text-align: center;
+    color: whitesmoke;
+}
+
+#spaceship {
+transform: translateZ(60px);
+height: 150px;
+width: 150px;
+position: absolute;
+top: 15%;
+left: 25%;
+}
+
+#starfield{
+    transform: translateZ(-60px);
+}

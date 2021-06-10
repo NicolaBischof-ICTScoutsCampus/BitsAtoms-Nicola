@@ -58,6 +58,16 @@ top: 20%;
 left: 28%;
 }
 
+#laser {
+    background: #ff0000;
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+  }
+
 #starfield{
     transform: translateZ(-50px);
 }

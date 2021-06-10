@@ -1,7 +1,8 @@
 /*
 	Starfield lets you take a div and turn it into a starfield.
-
+    CREDITS TO: https://github.com/dwmkerr/starfield
 */
+
 
 //	Define the starfield class.
 function Starfield() {
@@ -13,6 +14,7 @@ function Starfield() {
 	this.maxVelocity = 200;
 	this.stars = 160;
 	this.intervalId = 0;
+	this.isStopped = false;
 }
 
 //	The main function - initialises the starfield.
@@ -52,6 +54,7 @@ Starfield.prototype.start = function() {
 
 	var self = this;
 	//	Start the timer.
+	
 	this.intervalId = setInterval(function() {
 		self.update();
 		self.draw();	
@@ -63,6 +66,7 @@ Starfield.prototype.stop = function() {
 };
 
 Starfield.prototype.update = function() {
+	if(!this.isStopped){
 	var dt = 1 / this.fps;
 
 	for(var i=0; i<this.stars.length; i++) {
@@ -74,6 +78,7 @@ Starfield.prototype.update = function() {
 		 	(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
 		}
 	}
+}
 };
 
 Starfield.prototype.draw = function() {

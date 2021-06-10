@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="DE">
-
+<html lang="EN">
 <head>
     <meta charset="utf-8" />
     <title>BitsAtoms II</title>
@@ -9,22 +8,22 @@
     <meta name="author" content="Nicola Bischof">
     <meta name="description" content="small card created for the Bits and Atoms II module @zhdk">
     <script src="js/main.js"></script>
+    <script src="js/starfield.js"></script>
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
     <div class="center">
-        <div class="card" data-tilt data-tilt-max="25" data-tilt-full-page-listening data-tilt-glare
-            data-tilt-max-glare="0.25">
+        <div class="card" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.25">
             <img id="spaceship" alt="spaceship" src="data/spaceship.gif">
             <div id="starfield"></div>
             <h1 class="textProperties">THE<br>COSMOS SHOODA</h1>
             <p class="textProperties">he throws himself into the unknown <br> vastness of space...<br><br>A hero of his
-                time!</p>
+                time!<br>Use &#8592; &#8594; and SPACE to fly!</p>
         </div>
-    </div>
+    </div>  
+
     <script src="js/vanilla-tilt.js"></script>
-    <script src="js/starfield.js"></script>
     <script>
         var container = document.getElementById('starfield');
         var starfield = new Starfield();
@@ -32,5 +31,4 @@
         starfield.start();
     </script>
 </body>
-
 </html>
